@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    min-width: 400px;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+.top-panel {
+    height: 750px;
+    background-image: url("/images/b.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    padding: 0 40px;
+    max-width: 1800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-in {
+    background-color: #ff0000;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.logo {
+    width: 180px;
+    height: 90px;
+    margin-left: 20px;
+}
+
+.wrapper {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+h1 {
+    margin-top: 140px;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+} 
+
+.register-bar-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.register-bar {
+    height: 50px;
+    width: 500px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.register-button {
+    width: 200px;
+    height: 56px;
+    background-color: #ff0000;
+    border: none;
+    border-left: 1px solid grey;
+    font-size: 25px;
+    color: white;
+}
+
+.register-button:hover {
+    cursor: pointer;
+}
+
+.register-button::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 2px;
+    background-color: white;
+    transform: rotate(-40deg);
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.register-button::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 2px;
+    background-color: white;
+    transform: rotate(40deg);
+    margin-left: 138px;
+    margin-top: 13px;
+}
+
+
+
+/* .panel {
+    background-color: #000;
+    height: 500px;
+    border-top: 10px solid #222222;
+    border-bottom: 10px solid #222222;
+}
