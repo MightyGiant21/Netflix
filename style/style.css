@@ -114,11 +114,35 @@ h2 {
     margin-top: 13px;
 }
 
-
-
-/* .panel {
+.panel-container {
     background-color: #000;
-    height: 500px;
-    border-top: 10px solid #222222;
-    border-bottom: 10px solid #222222;
+}
+
+.cell {
+    height: 450px;
+    border-top: 8px solid rgb(66, 66, 66);
+}
+
+.cell:nth-child(1),
+.cell:nth-child(3) {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 50px;
+}
+
+.cell:nth-child(2),
+.cell:nth-child(4) {
+    display: flex;
+    justify-content: flex-end;
+}
+
+p1, p2 {
+    color: white;
+    align-items: center;
+    display: flex;
+}
+
+p1 {
+    font-size: 50px;
+    font-weight: bold;
 }
