@@ -1,22 +1,27 @@
-body, html {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+
+body, html {
     min-width: 400px;
-    box-sizing: border-box;
     font-family: Helvetica;
+    color: #fff;
 }
 
 .top-panel {
     height: 750px;
-    background-image: url("/images/b.jpeg");
+    background:linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 1)), url("/images/bg.jpg");
     background-size: cover;
     background-position: center;
 }
 
 header {
-    padding: 0 40px;
-    max-width: 1800px;
-    margin: auto;
+    max-width: 1920px;
+    height:  100px;
+    margin: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,18 +32,22 @@ header {
     padding: 8px 14px;
     text-decoration: none;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-right: 30px;
 }
 
 .logo {
-    width: 180px;
-    height: 90px;
+    width: 170px;
     margin-left: 20px;
 }
 
+.hero-card {
+    padding: 70px 45px;
+}
+
 .wrapper {
-    max-width: 650px;
+    max-width: 950px;
+    padding: 75px 0;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -46,46 +55,51 @@ header {
     flex-direction: column;
 }
 
-h1, h2, h3 {
-    color: white;
-}
 
 h1 {
-    margin-top: 140px;
+    margin: 0;
     text-align: center;
-    font-size: 50px;
-    margin-bottom: 0;
+    font-size: 4rem;
 }
 
 h2 {
     text-align: center;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin: 1.5rem;
+    font-size: 1.625rem;
 } 
+
+h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
 
 .register-bar-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .register-bar {
-    height: 50px;
+    height: 70px;
     width: 500px;
     margin-bottom: 40px;
     font-size: 15px;
-    padding-left: 10px;
+    padding: 0 0 0 10px;
+    border: none;
 }
 
 .register-button {
-    width: 200px;
-    height: 56px;
-    background-color: #ff0000;
+    width: 250px;
+    height: 70px;
+    background-color: #e20813;
     border: none;
     border-left: 1px solid grey;
-    font-size: 25px;
-    color: white;
+    font-size: 1.875rem;
+    letter-spacing: 1.2px;
+    color: #fff;
 }
 
 .register-button:hover {
@@ -97,10 +111,10 @@ h2 {
     position: absolute;
     height: 10px;
     width: 2px;
-    background-color: white;
+    background-color: #fff;
     transform: rotate(-40deg);
     margin-left: 10px;
-    margin-top: 7px;
+    margin-top: 9px;
 }
 
 .register-button::before {
@@ -108,41 +122,40 @@ h2 {
     position: absolute;
     height: 10px;
     width: 2px;
-    background-color: white;
+    background-color: #fff;
     transform: rotate(40deg);
-    margin-left: 138px;
-    margin-top: 13px;
+    margin-left: 177px;
+    margin-top: 16px;
 }
 
-.panel-container {
+
+.panel {
     background-color: #000;
+    height: 480px;
+    padding: 70px 45px;
+    border-top: 8px solid #222222;
 }
 
-.cell {
-    height: 450px;
-    border-top: 8px solid rgb(66, 66, 66);
-}
-
-.cell:nth-child(1),
-.cell:nth-child(3) {
+.panel-content {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
-    padding-left: 50px;
-}
-
-.cell:nth-child(2),
-.cell:nth-child(4) {
-    display: flex;
-    justify-content: flex-end;
-}
-
-p1, p2 {
-    color: white;
     align-items: center;
-    display: flex;
+    gap: 70px;
 }
 
-p1 {
-    font-size: 50px;
-    font-weight: bold;
+.panel-image {
+    flex: 1;
+    width: 100%;
+}
+
+.panel-heading {
+    text-align: left;
+    font-size: 3rem;
+}
+
+.panel-paragraph {
+    text-align: left;
+    margin: 20px 0 0 0;
+    font-size: 1.6rem; 
 }
