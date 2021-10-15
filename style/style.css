@@ -241,6 +241,8 @@ h5 {
     padding: 70px 45px;
     border-top: 8px solid #222222;
     display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
 }
 
 .footer-content {
