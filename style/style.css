@@ -130,9 +130,8 @@ h3 {
     background-color: #fff;
     transform: rotate(40deg);
     margin-left: 177px;
-    margin-top: 16px;
+    margin-top: 17px;
 }
-
 
 .panel {
     background-color: #000;
@@ -148,39 +147,6 @@ h3 {
     display: flex;
     align-items: center;
     gap: 70px;
-}
-
-.cell {
-    display: flex;
-    height: 450px;
-    border-top: 8px solid rgb(66, 66, 66);
-    flex-direction: column;
-}
-
-.cell:nth-child(1),
-.cell:nth-child(3) {
-    justify-content: flex-start;
-    padding-left: 50px;
-}
-
-.cell:nth-child(2),
-.cell:nth-child(4) {
-    align-content: flex-end;
-}
-
-p1, p2 {
-    color: white;
-    display: flex;
-    width: 500px;
-}
-
-p1 {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-p2 {
-    font-size: 30px;
 }
 
 .panel-image {
@@ -199,8 +165,78 @@ p2 {
     font-size: 1.6rem; 
 }
 
+.faq-panel {
+    background-color: #000;
+    height: 1400px;
+    padding: 70px 45px;
+    border-top: 8px solid #222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+h5 {
+    font-size: 20px;
+    margin-top: 70px;
+    font-weight: 100;
+}
+
+.faq-list {
+    display: flex;
+    background-color: rgb(50, 50, 50);
+    height: 4.5rem;
+    width: 60vw;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    font-size: 25px;
+}
+
+.plus-sign {
+    height: 25px;
+    width: 25px;
+    margin-right: 25px;
+}
+
+.plus-sign::after {
+    content: "";
+    position: absolute;
+    margin-left: 11px;
+    height: 25px;
+    width: 3px;
+    background-color: white;
+}
+
+.plus-sign::before {
+    content: "";
+    position: absolute;
+    margin-top: 11px;
+    height: 3px;
+    width: 25px;
+    background-color: white;
+}
+
+.faq-list:hover {
+    cursor: pointer;
+}
+
+.register-container-lower {
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .footer-panel {
     background-color: #000;
+    width: 100vw;
     height: 400px;
     padding: 70px 45px;
     border-top: 8px solid #222222;
