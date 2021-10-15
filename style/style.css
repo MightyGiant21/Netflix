@@ -119,30 +119,39 @@ h2 {
 }
 
 .cell {
+    display: flex;
     height: 450px;
     border-top: 8px solid rgb(66, 66, 66);
+    flex-direction: column;
 }
 
 .cell:nth-child(1),
 .cell:nth-child(3) {
-    display: flex;
     justify-content: flex-start;
     padding-left: 50px;
 }
 
 .cell:nth-child(2),
 .cell:nth-child(4) {
-    display: flex;
-    justify-content: flex-end;
+    align-content: flex-end;
 }
+
+.cell-1 {
+}
+
+
 
 p1, p2 {
     color: white;
-    align-items: center;
     display: flex;
+    width: 500px;
 }
 
 p1 {
     font-size: 50px;
     font-weight: bold;
+}
+
+p2 {
+    font-size: 30px;
 }
