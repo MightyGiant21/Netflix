@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 body, html {
     min-width: 400px;
     font-family: Helvetica;
@@ -21,7 +20,7 @@ body, html {
 header {
     max-width: 1920px;
     height:  100px;
-    margin: 0 auto;
+    margin: 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,9 +54,8 @@ header {
     flex-direction: column;
 }
 
-
-h1 {
-    margin: 0;
+.hero-heading {
+    margin: 0 100px;
     text-align: center;
     font-size: 4rem;
 }
@@ -96,6 +94,9 @@ h3 {
 }
 
 .register-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 250px;
     height: 70px;
     background-color: #e20813;
@@ -111,26 +112,29 @@ h3 {
     background-color: #F21621;
 }
 
-.register-button::after {
+.arrow {
+    height: 2rem;
+    width: 2rem;
+}
+
+.arrow::after {
     content: "";
     position: absolute;
     height: 10px;
     width: 2px;
     background-color: #fff;
     transform: rotate(-40deg);
-    margin-left: 10px;
-    margin-top: 9px;
+    margin-top: 7px;
 }
 
-.register-button::before {
+.arrow::before {
     content: "";
     position: absolute;
     height: 10px;
     width: 2px;
     background-color: #fff;
     transform: rotate(40deg);
-    margin-left: 177px;
-    margin-top: 17px;
+    margin-top: 15px;
 }
 
 .panel {
@@ -150,8 +154,9 @@ h3 {
 }
 
 .panel-image {
-    flex: 1;
-    width: 100%;
+    flex: 1 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .panel-heading {
@@ -167,12 +172,13 @@ h3 {
 
 .faq-panel {
     background-color: #000;
-    height: 1400px;
+    height: 1000px;
     padding: 70px 45px;
     border-top: 8px solid #222222;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 }
 
 h4 {
@@ -189,12 +195,12 @@ h5 {
 .faq-list {
     display: flex;
     background-color: rgb(50, 50, 50);
-    height: 4.5rem;
-    width: 60vw;
+    min-height: 4.5rem;
+    width: 60%;
+    max-width: 800px;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 6px;
-    padding-left: 20px;
+    padding-left: 30px;
     font-size: 25px;
 }
 
@@ -228,21 +234,29 @@ h5 {
 
 .register-container-lower {
     height: 200px;
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/* Footer  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
 .footer-panel {
     background-color: #000;
-    width: 100vw;
+    width: 100%;
     height: 400px;
     padding: 70px 45px;
     border-top: 8px solid #222222;
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
 }
 
 .footer-content {
@@ -283,4 +297,36 @@ h5 {
     font-size: 0.8rem;
     color: #757575;
     font-weight: 300;
+}
+
+
+
+/* Media queries */
+@media (max-width: 1435px) {
+    .hero-heading {
+        font-size: 3.2rem;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .register-input {
+        height: 60px;
+        width: 450px;
+    }
+
+    .register-button {
+        width: 210px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 932px) {
+    .panel-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+    }
 }
