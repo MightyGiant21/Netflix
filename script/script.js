@@ -1,26 +1,28 @@
-let what_is_netflix_plus = document.querySelector("#what-is-netflix-plus")
-let netflix_cost_plus = document.querySelector("#netflix-cost-plus")
-let where_to_watch_plus = document.querySelector("#where-to-watch-plus")
-let how_to_cancel_plus = document.querySelector("#how-to-cancel-plus")
-let what_to_watch_plus = document.querySelector("#what-to-watch-plus")
-let good_for_kids_plus = document.querySelector("#good-for-kids-plus")
+// Add event listener to each element.
+let accordion_menu = document.getElementsByClassName("faq-list");
 
-let what_is_netflix = document.querySelector("#what-is-netflix")
-let netflix_cost = document.querySelector("#netflix-cost")
-let where_to_watch = document.querySelector("#where-to-watch")
-let how_to_cancel = document.querySelector("#how-to-cancel")
-let what_to_watch = document.querySelector("#what-to-watch")
-let good_for_kids = document.querySelector("#good-for-kids")
+for (i = 0; i < accordion_menu.length; i++) {
+    accordion_menu[i].addEventListener('click', animateAccordionMenu);
+}
 
+function animateAccordionMenu(e) {
+    let plus_sign = e.target.children[0];
+    let drop_down = this.nextElementSibling;
 
-what_is_netflix_plus.addEventListener('click', changePlusSign, { what_is_netflix_plus });
-netflix_cost_plus.addEventListener('click', changePlusSign, { netflix_cost_plus });
-where_to_watch_plus.addEventListener('click', changePlusSign, { where_to_watch_plus });
-how_to_cancel_plus.addEventListener('click', changePlusSign, { how_to_cancel_plus });
-what_to_watch_plus.addEventListener('click', changePlusSign, { what_to_watch_plus });
-good_for_kids_plus.addEventListener('click', changePlusSign, { good_for_kids_plus });
+    if (drop_down.style.display === 'flex') {
+        drop_down.style.display = 'none'
+        changePlusSign(plus_sign);
+    } else {
+        // Iterate over every drop down in the accordion menu.
+        // Change display to none on all of them.
+        for (i = 0; i < accordion_menu.length; i++) {
+            accordion_menu[i].nextElementSibling.style.display = 'none';
+        }
+        drop_down.style.display = 'flex';
+        changePlusSign(plus_sign);
+    }
+}
 
-
-function changePlusSign() {
-    this.style.transform = 'rotate(45deg)';
+function changePlusSign(e) {
+    e.style.transform = 'rotate(45deg)';
 }

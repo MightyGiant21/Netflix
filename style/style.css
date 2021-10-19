@@ -170,9 +170,18 @@ h3 {
     font-size: 1.6rem; 
 }
 
+/* Accordion menu */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
 .faq-panel {
     background-color: #000;
-    height: 1000px;
+    min-height: 1000px;
     padding: 70px 45px;
     border-top: 8px solid #222222;
     display: flex;
@@ -200,29 +209,32 @@ h5 {
     max-width: 800px;
     align-items: center;
     justify-content: space-between;
-    padding-left: 30px;
+    padding-left: 2rem;
     font-size: 25px;
+    color: white;
+    border: none;
 }
 
 .plus-sign {
     height: 25px;
     width: 25px;
     margin-right: 25px;
-}
-
-.plus-sign::after {
-    content: "";
-    position: absolute;
-    margin-left: 11px;
-    height: 25px;
-    width: 3px;
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .plus-sign::before {
     content: "";
     position: absolute;
-    margin-top: 11px;
+    height: 25px;
+    width: 3px;
+    background-color: white;
+}
+
+.plus-sign::after {
+    content: "";
+    position: absolute;
     height: 3px;
     width: 25px;
     background-color: white;
@@ -238,6 +250,14 @@ h5 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.drop-down {
+    display: none;
+    background-color: rgb(50, 50, 50);
+    width: 60%;
+    font-size: 26px;
+    padding: 2rem;
 }
 
 /* Footer  */
